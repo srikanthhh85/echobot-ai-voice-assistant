@@ -69,6 +69,3 @@ EchoBot-AI-Voice-Assistant
 - Dark/Light Theme
 
 ---
-Computer Science Engineering Student
-
-Interested in AI • Cybersecurity • Web Development

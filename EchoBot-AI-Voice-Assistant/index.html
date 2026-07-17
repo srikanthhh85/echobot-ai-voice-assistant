@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoBot - Voice to Text Bot</title>
+    <meta name="description" content="Talk to EchoBot to convert your voice directly into text in multiple languages.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <div class="container">
+        <header>
+            <h1>EchoBot</h1>
+            <p>Your personal voice-to-text bot. Speak clearly, I'll handle the rest.</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="language-selector">
+                    <label for="language-select">Language:</label>
+                    <select id="language-select">
+                        <option value="en-US">English (US)</option>
+                        <option value="en-IN">English (India)</option>
+                        <option value="te-IN">Telugu (తెలుగు)</option>
+                        <option value="hi-IN">Hindi (हिंदी)</option>
+                        <option value="ta-IN">Tamil (தமிழ்)</option>
+                        <option value="kn-IN">Kannada (ಕನ್ನಡ)</option>
+                        <option value="ml-IN">Malayalam (മലയാളം)</option>
+                        <option value="mr-IN">Marathi (मराठी)</option>
+                        <option value="bn-IN">Bengali (বাংলা)</option>
+                        <option value="gu-IN">Gujarati (ગુજરાતી)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="recording-area">
+                <button id="mic-btn" class="mic-btn" aria-label="Start Recording">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                <div id="status" class="status">Click to start speaking</div>
+            </div>
+
+            <div class="panels-wrapper">
+                <div class="panel">
+                    <h3>Original Text</h3>
+                    <div class="output-container">
+                        <div class="copy-wrapper">
+                             <button id="copy-btn" class="icon-btn" title="Copy Text"><i class="fa-regular fa-copy"></i></button>
+                             <button id="download-btn" class="icon-btn" title="Download Text"><i class="fa-solid fa-download"></i></button>
+                             <button id="clear-btn" class="icon-btn" title="Clear Text"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                        <textarea id="transcription-output" placeholder="Your transcription will appear here..." readonly></textarea>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3>Translation</h3>
+                    <div class="translation-section">
+                        <div class="controls translation-controls">
+                            <div class="language-selector">
+                                <label for="translate-lang-select">To:</label>
+                                <select id="translate-lang-select">
+                                    <option value="en">English</option>
+                                    <option value="hi">Hindi (हिंदी)</option>
+                                    <option value="te">Telugu (తెలుగు)</option>
+                                    <option value="ta">Tamil (தமிழ்)</option>
+                                    <option value="kn">Kannada (ಕನ್ನಡ)</option>
+                                    <option value="ml">Malayalam (മലയാളം)</option>
+                                    <option value="mr">Marathi (मराठी)</option>
+                                    <option value="bn">Bengali (বাংলা)</option>
+                                    <option value="gu">Gujarati (ગુજરાતી)</option>
+                                    <option value="es">Spanish (Español)</option>
+                                    <option value="fr">French (Français)</option>
+                                </select>
+                            </div>
+                            <button id="translate-btn" class="action-btn">
+                                <i class="fa-solid fa-language"></i> Translate
+                            </button>
+                        </div>
+                        <div class="output-container">
+                            <textarea id="translation-output" placeholder="Translation will appear here..." readonly></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
